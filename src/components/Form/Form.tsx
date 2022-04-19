@@ -13,21 +13,21 @@ import { useState } from 'react';
 
 const Form = () => {
 	const [totalTips, setTotalTips] = useState<IForm>({
-		persons: 0,
+		persons: '',
 		total: 0,
-		bill: 0,
+		bill: '',
 		tip: 0,
 	});
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
 		setTotalTips({
 			...totalTips,
-			bill: +event.target.value,
+			bill: event.target.value,
 		});
 	};
 	const handlePersons = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setTotalTips({
 			...totalTips,
-			persons: +event.target.value,
+			persons: event.target.value,
 		});
 	  };
 	  const handleTips= (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,7 +38,7 @@ const Form = () => {
 	  };
 	  const handleCountTips = () => {
 		const persent =
-		  ((totalTips.bill / 100) * 10) / totalTips.persons;
+		  ((+totalTips.bill / 100) * +totalTips.tip) / +totalTips.persons;
 		  console.log(totalTips.tip)
 		setTotalTips({
 			...totalTips,

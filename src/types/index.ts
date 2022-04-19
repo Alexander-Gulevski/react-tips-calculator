@@ -1,6 +1,6 @@
 export interface IForm {
-    persons: number;
+    persons: string;
     total: number;
-    bill:  number;
+    bill:  string;
     tip: number;
 }
