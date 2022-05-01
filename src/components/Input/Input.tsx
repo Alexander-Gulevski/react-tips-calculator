@@ -1,17 +1,21 @@
-import { StyledInput } from './styles';
+import { InputStyled } from './styles';
 
-interface IInput {
-	placeholderText: string;
-	value: any;
-	onChange: any;
+interface IProps {
+    handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    name: string;
+    value: number | string;
 }
 
-const Input = ({ placeholderText, value, onChange }: IInput) => {
-	return (
-			<StyledInput
-				placeholder={placeholderText} onChange={onChange} value={value} required 
-			/>
-	);
+const Input = ({ handleInput, name, value }: IProps) => {
+    return (
+        <InputStyled
+            onChange={handleInput}
+            name={name}
+            placeholder={`enter ${name}`}
+            type={'number'}
+            value={value}
+        />
+    );
 };
 
 export default Input;

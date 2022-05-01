@@ -1,6 +1,11 @@
-export interface IForm {
-    persons: string;
+export interface ITips {
     total: number;
-    bill:  string;
+    persons: number | string;
+    bill: number | string;
     tip: number;
 }
+
+export type TipsOptions = {
+    readonly value: string;
+    readonly label: string;
+};

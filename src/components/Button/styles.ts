@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
-	padding: 13px 80px;
-	
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 35px;
-	color: #ffffff;
-	text-align: center;
+export const ButtonStyled = styled.button<{ $isDisabled: boolean }>`
+    padding: 13px;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #ffffff;
 
-	background-color: #2ed2c9;
-	&:hover {
-		background-color: #2cb3ac;
-	}
-	&:active {
-		background: #159c87;
-	}
+    background: #2ed2c9;
+    opacity: ${({ $isDisabled }) => ($isDisabled ? 0.5 : 1)};
 `;
