@@ -1,1 +1,1 @@
-see my project: https://xolod1501.github.io/react-tips-calculator/
+see my project: https://Alexander-Gulevski.github.io/react-tips-calculator/
